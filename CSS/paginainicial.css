@@ -1,1 +1,134 @@
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    background:white;
+}
+
+.topo{
+    width:100%;
+    padding:20px;
+    text-align:center;
+    border-bottom:4px solid #d8d8d8;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.topo h1{
+    color:#0b36ff;
+    font-size:70px;
+    font-weight:bold;
+}
+
+.bem-vindo{
+    width:420px;
+    margin:50px auto;
+    background:#cbe0ff;
+    padding:25px;
+    text-align:center;
+    border-radius:8px;
+    border-bottom:6px solid #cecece;
+    font-size:60px;
+    font-weight:bold;
+}
+
+.salas{
+    padding:20px 70px;
+}
+
+.salas h2{
+    font-size:60px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:360px;
+    height:230px;
+    background:#cbe0ff;
+    border-bottom:6px solid #cecece;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:bold;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:scale(1.10);
+}
+
+.mais{
+    width:110px;
+    height:110px;
+    border:6px solid black;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:90px;
+}
+
+
+/* Fundo Escurecido (Overlay) */
+.overlay {
+  display: none; /* Escondido */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa do Modal */
+.modal-content {
+  background: #1e90ff; /* Azul do modal */
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  color: white;
+}
+
+.modal-content input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-confirmar {
+  background-color: #32cd32; /* Verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
