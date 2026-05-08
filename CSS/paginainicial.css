@@ -88,10 +88,8 @@ body{
     font-size:90px;
 }
 
-
-/* Fundo Escurecido (Overlay) */
 .overlay {
-  display: none; /* Escondido */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -100,35 +98,50 @@ body{
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+  
 }
 
-/* Caixa do Modal */
+
 .modal-content {
-  background: #1e90ff; /* Azul do modal */
+  background: #a4c1ec; 
   padding: 20px;
-  border-radius: 15px;
-  width: 250px;
+  border-radius: 30px;
+  width: 400px;
+  height: 500px;
   text-align: center;
   color: white;
+  
+}
+
+.modal-content h3 {
+    font-size: 30px;
+    margin-top: 10px;
 }
 
 .modal-content input {
   display: block;
-  width: 90%;
+  width: 80%;
   margin: 10px auto;
-  padding: 8px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 10px;
   border: none;
+  margin-top: 80px;
+  height: 60px;
+  font-size: 20px;
 }
 
 .btn-confirmar {
-  background-color: #32cd32; /* Verde */
+  background-color: #00b600; /* Verde */
   color: white;
+  font-size: 20px;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 30px;
+  width: 50%;
+  height: 50px;
 }
 
 
