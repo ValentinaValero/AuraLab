@@ -1,0 +1,133 @@
+from IPython.display import HTML, display
+
+
+html_content = """
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AuraLab — Aluno</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Georgia, serif; background: #fff; color: #111; min-height: 100vh; }
+
+.page { display: none; max-width: 420px; margin: 0 auto; padding: 36px 24px; }
+.page.active { display: block; }
+
+.logo { font-size: 1.3rem; font-weight: 700; text-align: center; letter-spacing: -0.4px;
+        border-bottom: 2px solid #111; padding-bottom: 12px; margin-bottom: 28px; }
+
+.profile-card { border: 1px solid #ddd; padding: 28px 20px; text-align: center; margin-bottom: 20px; }
+.avatar { width: 64px; height: 64px; border-radius: 50%; background: #e8e8e8;
+          display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+.avatar svg { width: 36px; height: 36px; opacity: 0.4; }
+.profile-name { font-size: 1rem; font-weight: 700; letter-spacing: .02em; margin-bottom: 20px; }
+
+.aura-box { border: 1px solid #ddd; padding: 16px 24px; display: inline-flex;
+            align-items: center; gap: 10px; margin-bottom: 20px; }
+.aura-icon { font-size: 1.4rem; }
+.aura-num  { font-size: 2rem; font-weight: 700; }
+
+.btn-podio { display: block; width: 100%; padding: 11px; background: #5b4fcf; color: #fff;
+             border: none; font-family: Georgia, serif; font-size: 0.88rem; font-weight: 700;
+             cursor: pointer; letter-spacing: .04em; }
+.btn-podio:hover { background: #4a3fb8; }
+
+.podium-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; }
+
+.podium-row { display: flex; align-items: center; gap: 10px; padding: 12px 14px;
+              border: 1px solid #eee; margin-bottom: 8px; }
+.podium-row.me { border-color: #5b4fcf; background: #faf9ff; }
+
+.p-avatar { width: 36px; height: 36px; border-radius: 50%; background: #e8e8e8;
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.p-avatar svg { width: 20px; height: 20px; opacity: 0.4; }
+
+.p-name { flex: 1; }
+.p-name .name { font-size: 0.88rem; font-weight: 700; }
+.p-name .mat  { font-size: 0.72rem; color: #999; margin-top: 1px; }
+
+.p-aura { display: flex; align-items: center; gap: 5px; font-weight: 700;
+          font-size: 0.95rem; margin-right: 10px; }
+.p-aura span { font-size: 1rem; }
+
+.medal { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+         font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
+.medal.g { background: #f5c842; color: #7a5f00; }
+.medal.s { background: #c0c0c0; color: #444; }
+.medal.b { background: #cd7f32; color: #fff; }
+.medal.n { background: #eee; color: #888; }
+
+.back { font-size: 0.75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+        color: #888; cursor: pointer; margin-bottom: 20px; display: inline-block; }
+.back:hover { color: #111; }
+</style>
+</head>
+<body>
+
+<div id="p-perfil" class="page active">
+  <div class="logo">AuraLab</div>
+
+  <div class="profile-card">
+    <div class="avatar">
+      <svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="13" r="7" fill="#555"/><ellipse cx="18" cy="29" rx="11" ry="7" fill="#555"/></svg>
+    </div>
+    <div class="profile-name">YASMIN UKRAINSKI</div>
+    <div class="aura-box">
+      <span class="aura-icon">🔥</span>
+      <span class="aura-num">150</span>
+    </div>
+    <button class="btn-podio" onclick="go('p-podio')">Ver pódio</button>
+  </div>
+</div>
+
+<div id="p-podio" class="page">
+  <div class="logo">AuraLab</div>
+  <span class="back" onclick="go('p-perfil')">← Voltar</span>
+  <div class="podium-title">Pódio — 3DS</div>
+
+  <div class="podium-row me">
+    <div class="p-avatar"><svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="13" r="7" fill="#555"/><ellipse cx="18" cy="29" rx="11" ry="7" fill="#555"/></svg></div>
+    <div class="p-name">
+      <div class="name">YASMIN UKRAINSKI</div>
+      <div class="mat">N30</div>
+    </div>
+    <div class="p-aura"><span>🔥</span> 150</div>
+    <div class="medal g">1°</div>
+  </div>
+
+  <div class="podium-row">
+    <div class="p-avatar"><svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="13" r="7" fill="#555"/><ellipse cx="18" cy="29" rx="11" ry="7" fill="#555"/></svg></div>
+    <div class="p-name">
+      <div class="name">GABRIEL GAREIS DA SILVA</div>
+      <div class="mat">N29</div>
+    </div>
+    <div class="p-aura"><span>🔥</span> 25</div>
+    <div class="medal s">2°</div>
+  </div>
+
+  <div class="podium-row">
+    <div class="p-avatar"><svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="13" r="7" fill="#555"/><ellipse cx="18" cy="29" rx="11" ry="7" fill="#555"/></svg></div>
+    <div class="p-name">
+      <div class="name">CAMILA ARTIN</div>
+      <div class="mat">N28</div>
+    </div>
+    <div class="p-aura"><span>🔥</span> 20</div>
+    <div class="medal b">3°</div>
+  </div>
+
+</div>
+
+<script>
+function go(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
+"""
+
+
+display(HTML(html_content))
