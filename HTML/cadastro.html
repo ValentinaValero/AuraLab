@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="./CSS/cadastro.css">
+<title>AuraLab Cadastro</title>
+
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="logo">AuraLab</div>
+
+  <input class="input" id="nome" type="text" placeholder="Nome">
+
+  <input class="input" id="email" type="email" placeholder="Email">
+  <div class="erro" id="erroEmail">Digite um email válido</div>
+
+  <input class="input" id="cpf" type="text" placeholder="CPF">
+
+  <div class="senha-box">
+    <input class="input" id="senha" type="password" placeholder="Senha">
+    <span class="verSenha" id="toggleSenha"><i class="fa-solid fa-eye"></i></span>
+  </div>
+
+  <button class="btn">Cadastrar</button>
+
+   <div class="small">
+    Já tem uma conta?<br>
+    <a href="login.html">Faça Login</a>
+  </div>
+
+</div>
+
+<script src="./JS/cadastro.js"></script>
+
+</body>
+</html>
