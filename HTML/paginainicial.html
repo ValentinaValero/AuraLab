@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="port-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina inicial</title>
+     <link rel="stylesheet" href="../CSS/paginainicial.css">
+</head>
+<body>
+    
+  <div class="container">
+
+    <div class="topo">
+        <h1>AuraLab</h1>
+    </div>
+
+    <div class="bem-vindo">
+        Bem-vindo
+    </div>
+
+    <div class="salas">
+
+        <h2>Salas</h2>
+
+        <div class="cards">
+
+            <div class="card" id="openModal">
+                <div class="mais">+</div>
+            </div>
+
+            <div class="card">
+                Sala:<br>
+                3°DS
+            </div>
+
+            <div class="card">
+                Sala:<br>
+                9°B
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- O Modal (Escondido por padrão) -->
+<div id="modalOverlay" class="overlay">
+  <div class="modal-content">
+    <h3>Adicionar Sala</h3>
+    
+    <input type="text" placeholder="Série">
+    <input type="text" placeholder="Turma">
+    
+    <button class="btn-confirmar" id="closeModal">Confirmar</button>
+  </div>
+</div>
+
+</body>
+</html>
 
