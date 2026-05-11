@@ -12,13 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/aluno.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/perfil.css">
+    <title>Perfil</title>
 </head>
 
 <body>
     <header class="navBar">
-        <a href="../HTML/aluno.html">
+        <a href="../HTML/paginainicial.html">
             <h1>AuraLab</h1>
         </a>
     </header>
@@ -27,21 +27,39 @@
         <div class="areaTopo">
             <div class="ftNome">
                 <img src="../img/perfil.png" alt="">
-                <h1>YASMIN UKRAINSKI</h1>
+                <h1>YASMIN<br>UKRAINSKI</h1>
+            </div>
+
+            <div class="numAura">
+                <img src="../img/fogo.png" alt="">
+                <h1>25</h1>
             </div>
         </div>
 
-        <div class="aura">
-            <div class="numAura">
-                <img src="../IMG/fogo.png" alt="">
-                <h1>25</h1>
+        <div class="areaEditar">
+            <div class="addAura">
+                <h1>Adicionar Aura</h1>
             </div>
 
-            <div class="btn">
-                <a href="../HTML/podio.html"><button>Ver pódio</button></a>
+            <div class="dscAura">
+                <h1>Descontar Aura</h1>
             </div>
         </div>
     </main>
+
+
+    <div id="modalOverlay" class="overlay">
+        <div class="modal-content">
+            <h3 id="tituloPopup">Alterar Aura</h3>
+
+            <input type="text" id="inputAura" placeholder="Digite o valor">
+            <div class="erro-texto" id="erroAura"></div>
+
+            <button class="btn-confirmar" id="confirmarAura">Confirmar</button>
+        </div>
+    </div>
+
+    <script src="../JS/perfil.js"></script>
 
 </body>
 

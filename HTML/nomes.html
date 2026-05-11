@@ -1,24 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/nomes.css">
+    <title>Document</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>AuraLab</h1>
-    </header>
+    <header class="navBar">
+            <a href="../HTML/paginainicial.html">
+                <h1>AuraLab</h1>
+            </a>
+        </header>
 
     <main>
         <h2>Sala: 3°DS</h2>
 
-        <a href="adicionar_aluno.html" class="btn-card add-btn">
+        <a href="#" id="openModal" class="btn-card add-btn">
             <span class="icon-plus">+</span>
             Adicionar novo aluno
         </a>
 
-        <a href="perfil_yasmin.html" class="btn-card">
+        <a href="../HTML/perfil.html" class="btn-card">
             <span class="student-name">Yasmin Ukrainski</span>
             <span class="number-tag">N30</span>
             <div class="score-box">
-                25 <span class="fire-icon">🔥</span>
+                25 <img src="../IMG/fogo.png" alt="ícone" class="fire-icon">
             </div>
         </a>
 
@@ -26,7 +44,7 @@
             <span class="student-name">Valentina Sofia Valero Hernandez</span>
             <span class="number-tag">N28</span>
             <div class="score-box">
-                20 <span class="fire-icon">🔥</span>
+                20 <img src="../IMG/fogo.png" alt="ícone" class="fire-icon">
             </div>
         </a>
 
@@ -34,7 +52,7 @@
             <span class="student-name">Clara Cristine Calonassi</span>
             <span class="number-tag">N05</span>
             <div class="score-box">
-                18 <span class="fire-icon">🔥</span>
+                18 <img src="../IMG/fogo.png" alt="ícone" class="fire-icon">
             </div>
         </a>
 
@@ -42,7 +60,7 @@
             <span class="student-name">Victor Augusto Viana De Souza</span>
             <span class="number-tag">N29</span>
             <div class="score-box">
-                0 <span class="fire-icon">🔥</span>
+                0 <img src="../IMG/fogo.png" alt="ícone" class="fire-icon">
             </div>
         </a>
 
@@ -50,7 +68,7 @@
             <span class="student-name">Monique de Oliveira Bicudo</span>
             <span class="number-tag">N17</span>
             <div class="score-box">
-                17 <span class="fire-icon">🔥</span>
+                17 <img src="../IMG/fogo.png" alt="ícone" class="fire-icon">
             </div>
         </a>
 
@@ -58,10 +76,26 @@
             <span class="student-name">Camila Artin</span>
             <span class="number-tag">N04</span>
             <div class="score-box">
-                20 <span class="fire-icon">🔥</span>
+                20 <img src="../IMG/fogo.png" alt="ícone" class="fire-icon">
             </div>
         </a>
     </main>
+
+    <div id="modalOverlay" class="overlay">
+        <div class="modal-content">
+            <h3>Adicionar Aluno</h3>
+
+            <input type="text" id="nomeAluno" placeholder="Nome">
+            <div class="erro-texto" id="erroNome"></div>
+
+            <input type="text" id="numeroChamada" placeholder="Número da chamada">
+            <div class="erro-texto" id="erroNumero"></div>
+
+            <button class="btn-confirmar" id="closeModal">Confirmar</button>
+        </div>
+    </div>
+
+    <script src="../JS/nomes.js"></script>
 
 </body>
 

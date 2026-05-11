@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <title>AuraLab Login</title>
+    <link rel="stylesheet" href="../CSS/loginProfessor.css">
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="logo">AuraLab</div>
+
+        <input class="input" id="username" type="text" placeholder="Digite seu username">
+        <div class="erro" id="erroUsername">Digite um usuário válido</div>
+
+        <div class="senha-box">
+            <input class="input" id="senha" type="password" placeholder="Digite sua senha">
+            <span class="verSenha" id="toggleSenha">
+                <i class="fa-solid fa-eye"></i>
+            </span>
+        </div>
+
+        <div class="erro" id="erroSenha">Digite sua senha</div>
+
+        <button class="btn">Entrar</button>
+
+    </div>
+
+    <script src="../JS/loginProfessor.js"></script>
+</body>
+
+</html>
