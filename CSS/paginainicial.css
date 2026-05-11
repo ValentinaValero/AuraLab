@@ -1,91 +1,157 @@
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background:#f5f5f5;
+body {
+  background: #f5f5f5;
 }
 
-.container{
-    width:100%;
-    min-height:100vh;
-    background:white;
+.geom {
+  font-family: "Geom", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
-.topo{
-    width:100%;
-    padding:20px;
-    text-align:center;
-    border-bottom:4px solid #d8d8d8;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+
+.instrument-sans {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
-.topo h1{
-    color:#0b36ff;
-    font-size:70px;
-    font-weight:bold;
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 9px -3px #000000;
+  box-shadow: 0px 0px 9px -3px #000000;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.bem-vindo{
-    width:420px;
-    margin:50px auto;
-    background:#cbe0ff;
-    padding:25px;
-    text-align:center;
-    border-radius:8px;
-    border-bottom:6px solid #cecece;
-    font-size:60px;
-    font-weight:bold;
+.navBar h1 {
+  margin: 0;
+  color: #3728FF;
+  cursor: pointer;
+  font-size: 60px;
+  font-family: "Geom", sans-serif;
+  position: relative;
+  display: inline-block;
 }
 
-.salas{
-    padding:20px 70px;
+.navBar h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0;
+  height: 3px;
+  background-color: #3728FF;
+  transition: width 0.3s ease;
 }
 
-.salas h2{
-    font-size:60px;
-    margin-bottom:50px;
+.navBar h1:hover::after {
+  width: 100%;
 }
 
-.cards{
-    display:flex;
-    justify-content:space-between;
-    gap:40px;
-    flex-wrap:wrap;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.card{
-    width:360px;
-    height:230px;
-    background:#cbe0ff;
-    border-bottom:6px solid #cecece;
-    border-radius:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:40px;
-    font-weight:bold;
-    transition:0.3s;
-    cursor:pointer;
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
 }
 
-.card:hover{
-    transform:scale(1.10);
+.topo {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #d8d8d8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.mais{
-    width:110px;
-    height:110px;
-    border:6px solid black;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:90px;
+.topo h1 {
+  color: #0b36ff;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.bem-vindo {
+  width: 600px;
+  margin: 70px auto 100px auto;
+  background: #D7E2FF;
+  padding: 25px;
+  text-align: center;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 16px 14px 3px rgba(55, 40, 255, 0.3);
+  box-shadow: 0px 16px 14px 3px rgba(55, 40, 255, 0.3);
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.salas {
+  padding: 20px 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.salas h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-family: "Instrument Sans", sans-serif;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Instrument Sans", sans-serif;
+  gap: 80px;
+  width: 100%;
+}
+
+.card {
+  width: 250px;
+  height: 180px;
+  background: #D7E2FF;
+  -webkit-box-shadow: 0px 16px 14px 3px rgba(55, 40, 255, 0.3);
+  box-shadow: 0px 16px 14px 3px rgba(55, 40, 255, 0.3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.10);
+}
+
+.mais {
+  width: 110px;
+  height: 110px;
+  border: 6px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
 }
 
 .overlay {
@@ -98,50 +164,66 @@ body{
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  
+
 }
 
 
 .modal-content {
-  background: #a4c1ec; 
+  background: #A4BEFF;
   padding: 20px;
   border-radius: 30px;
   width: 400px;
   height: 500px;
   text-align: center;
   color: white;
-  
+
 }
 
 .modal-content h3 {
-    font-size: 30px;
-    margin-top: 10px;
+  font-size: 35px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-family: "Instrument Sans", sans-serif;
 }
 
 .modal-content input {
   display: block;
-  width: 80%;
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 10px;
   border-radius: 10px;
   border: none;
-  margin-top: 80px;
+  margin-top: 10px;
   height: 60px;
+  width: 300px;
   font-size: 20px;
+  font-family: "Instrument Sans", sans-serif;
 }
 
 .btn-confirmar {
-  background-color: #00b600; /* Verde */
+  background-color: #31C350;
+  font-family: "Instrument Sans", sans-serif;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  margin-top: 30px;
-  width: 50%;
-  height: 50px;
+  margin-top: 40px;
+  width: 300px;
+  height: 70px;
 }
 
+.modal-content input.erro-input {
+  border: 2px solid #ff3d3d;
+}
 
+.erro-texto {
+  width: 300px;
+  margin: 6px auto 0 auto;
+  font-size: 14px;
+  color: #ffeded;
+  text-align: left;
+  font-family: "Instrument Sans", sans-serif;
+  min-height: 18px;
+}
