@@ -96,8 +96,10 @@ a {
     gap: 50px;
     align-items: center;
     justify-content: center;
-    margin-left: 500px;
-    margin-right: 500px;
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+    flex-wrap: wrap;
     padding-top: 40px;
     padding-bottom: 40px;
 }
